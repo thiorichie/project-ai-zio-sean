@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Macanan Game</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        #menu-frame {
+            text-align: center;
+            padding: 20px;
+        }
+        #game-frame {
+            display: none;
+            text-align: center;
+        }
+        .menu-button {
+            width: 200px;
+            height: 40px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #game-canvas {
+            background: white;
+            margin: 20px;
+            border: 2px solid #333;
+        }
+        #status-label {
+            font-size: 18px;
+            margin: 10px;
+        }
+        .game-button {
+            margin: 5px;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu-frame">
+        <h1>Macanan Game</h1>
+        <button class="menu-button" onclick="startGame(1)">Play as Macan</button>
+        <button class="menu-button" onclick="startGame(2)">Play as Uwong</button>
+        <button class="menu-button" onclick="startGame(3)">1 vs 1</button>
+        <button class="menu-button" onclick="startGame(4)">AI vs AI</button>
+    </div>
+
+    <div id="game-frame">
+        <canvas id="game-canvas"></canvas>
+        <div id="status-label">Start game - Macan's turn</div>
+        <div>
+            <button class="game-button" onclick="game.restartGame()">Restart Game</button>
+            <button class="game-button" onclick="returnToMenu()">Back to Menu</button>
+        </div>
+    </div>
+
+    <script src="macanan.js"></script>
+</body>
+</html>
